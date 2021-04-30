@@ -2,12 +2,11 @@ package br.com.docket.rdc.model;
 
 
 
-public abstract class Certidao {
+public class Certidao {
 	
 	private String nome;
 
-	
-	
+
 	public String getNome() {
 		return nome;
 	}

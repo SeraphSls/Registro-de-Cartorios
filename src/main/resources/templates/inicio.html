@@ -158,7 +158,7 @@ $(document).ready(function(){
                 <div class="row">
                     <div class="col-sm-8"><h2>Cadastro de <b>Cartorios</b></h2></div>
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Adicionar novo cartorio</button>
                     </div>
                 </div>
             </div>
@@ -172,8 +172,8 @@ $(document).ready(function(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td>Monkey D. Luffy</td>
+                    <tr  th:each="cartorio: ${cartorios}">
+                        <td th:text="${cartorio.nome}" >Monkey D. Luffy</td>
                         <td>Rei dos piratas</td>
                         <td>CARNE</td>
                         <td>
@@ -181,27 +181,7 @@ $(document).ready(function(){
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Vinsmoke Sanji</td>
-                        <td>Melhor cozinheiro</td>
-                        <td>NAMI SWAAAAAAAAAAAAN</td>
-                        <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Roronoa Zoro</td>
-                        <td>Melhor espadachim do mundo</td>
-                        <td>SANTORYU </td>
-                        <td>
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>      
+                    </tr>     
                 </tbody>
             </table>
         </div>
