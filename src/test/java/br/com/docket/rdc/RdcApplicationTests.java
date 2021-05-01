@@ -1,16 +1,25 @@
 package br.com.docket.rdc;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest
-class RdcApplicationTests {
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import br.com.docket.rdc.controller.RcdController;
+
+@RunWith(MockitoJUnitRunner.class)
+public class RdcApplicationTests {
 
 	@Test
-	void contextLoads() {
-		
-		
-		
+	public void contextLoads() {
+
+		RcdController controlador = new RcdController();
+
+		assertNotNull(controlador);
+		// controlador.Hello(modelo);
+		// assertEquals(expected, actual);
+
 	}
 
 }

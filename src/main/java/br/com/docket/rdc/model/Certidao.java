@@ -1,11 +1,13 @@
 package br.com.docket.rdc.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-
+@Entity
 public class Certidao {
-	
-	private String nome;
 
+	@Id
+	private String nome;
 
 	public String getNome() {
 		return nome;
@@ -14,6 +16,5 @@ public class Certidao {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 
 }

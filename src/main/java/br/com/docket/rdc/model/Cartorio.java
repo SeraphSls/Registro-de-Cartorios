@@ -1,34 +1,36 @@
 package br.com.docket.rdc.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Cartorio {
 
 
-	@Id
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
 	private String nome;
 	
 	private String endereco;
 	
-	private ArrayList<Certidao> certidoes;
+	@ManyToOne
+	private Certidao certidoes;
 
 	protected  Cartorio() {}
 
 	public Cartorio(String nome) {
 		this.nome = nome;
-
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public List<Certidao> getCertidoes() {
+	public Certidao getCertidoes() {
 		return certidoes;
 	}
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Table with Add and Delete Row Feature</title>
+<title>RDC - Registro de Cartorios </title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -167,15 +167,15 @@ $(document).ready(function(){
                     <tr>
                         <th>Nome</th>
                         <th>Endereço</th>
-                        <th>Telefone</th>
-                        <th>Ações</th>
+                        <th>Certidões</th>
+                        <th>ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr  th:each="cartorio: ${cartorios}">
                         <td th:text="${cartorio.nome}" >Monkey D. Luffy</td>
-                        <td>Rei dos piratas</td>
-                        <td>CARNE</td>
+                        <td th:text="${cartorio.endereco}" >Rei dos piratas</td>
+                        <td th:text="${cartorio.certidoes.nome}">CARNE</td>
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
