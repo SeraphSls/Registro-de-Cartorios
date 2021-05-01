@@ -1,6 +1,7 @@
 /*
  * @Author : Welber serafim 
  */
+
 package br.com.docket.rdc.controller;
 
 import org.springframework.stereotype.Controller;
@@ -11,17 +12,23 @@ import br.com.docket.rdc.model.Cartorio;
 import br.com.docket.rdc.to.CartorioTO;
 import br.com.docket.rdc.to.RotaMapping;
 
-@Controller
-@RequestMapping("novo")
-public class NovoCartorioController extends AbstractController {
 
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EditarCartorioController.
+ */
+@Controller
+@RequestMapping("atualizacao")
+public class EditarCartorioController extends AbstractController {
+	
 	/**
 	 * Inicio.
 	 *
 	 * @param novoCartorio the novo cartorio
 	 * @return the string
 	 */
-	@PostMapping("cartorio")
+	@PostMapping("editar")
 	public String inicio(CartorioTO novoCartorio) {
 
 		Cartorio novo = novoCartorio.transformToCartorio();

@@ -1,3 +1,6 @@
+/*
+ * @Author : Welber serafim 
+ */
 package br.com.docket.rdc.model;
 
 import java.util.ArrayList;
@@ -11,40 +14,37 @@ import javax.persistence.Id;
 @Entity
 public class Cartorio {
 
-
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	/** The id. */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String nome;
-	
 	private String endereco;
-	
 	private ArrayList<String> certidoes;
 
-	protected  Cartorio() {}
-	
+	protected Cartorio() {
+	}
+
 	public Cartorio(String nome) {
 		this.nome = nome;
 		certidoes = new ArrayList<String>();
 	}
-	
-	
 
 	public List<String> getCertidoes() {
 		return certidoes;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public void setCertidoes(ArrayList<String> certidoes) {
 		this.certidoes = certidoes;
 	}
 
-
-
 	public String getNome() {
 		return nome;
 	}
-
-	
 
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -58,4 +58,7 @@ public class Cartorio {
 		this.endereco = endereco;
 	}
 
+	public Long getId() {
+		return id;
+	}
 }

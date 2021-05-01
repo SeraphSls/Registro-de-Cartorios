@@ -12,23 +12,26 @@ import br.com.docket.rdc.to.CartorioTO;
 import br.com.docket.rdc.to.RotaMapping;
 
 @Controller
-@RequestMapping("novo")
-public class NovoCartorioController extends AbstractController {
-
+@RequestMapping("exclusao")
+public class ExclusaoCartorioController extends AbstractController {
+	
+	
 	/**
 	 * Inicio.
 	 *
 	 * @param novoCartorio the novo cartorio
 	 * @return the string
 	 */
-	@PostMapping("cartorio")
+	@PostMapping("excluir")
 	public String inicio(CartorioTO novoCartorio) {
 
 		Cartorio novo = novoCartorio.transformToCartorio();
 
-		super.getRepository().save(novo);
+		super.getRepository().delete(novo);
 
 		return RotaMapping.inicio.getDirecao();
 	}
+	
+	
 
 }
