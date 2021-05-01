@@ -1,10 +1,12 @@
 package br.com.docket.rdc.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Cartorio {
@@ -17,22 +19,32 @@ public class Cartorio {
 	
 	private String endereco;
 	
-	@ManyToOne
-	private Certidao certidoes;
+	private ArrayList<String> certidoes;
 
 	protected  Cartorio() {}
-
+	
 	public Cartorio(String nome) {
 		this.nome = nome;
+		certidoes = new ArrayList<String>();
 	}
+	
+	
+
+	public List<String> getCertidoes() {
+		return certidoes;
+	}
+
+	public void setCertidoes(ArrayList<String> certidoes) {
+		this.certidoes = certidoes;
+	}
+
+
 
 	public String getNome() {
 		return nome;
 	}
 
-	public Certidao getCertidoes() {
-		return certidoes;
-	}
+	
 
 	public void setNome(String nome) {
 		this.nome = nome;

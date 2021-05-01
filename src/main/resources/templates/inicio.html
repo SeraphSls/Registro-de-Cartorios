@@ -156,7 +156,7 @@ $(document).ready(function(){
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Cadastro de <b>Cartorios</b></h2></div>
+                    <div class="col-sm-8"><h2>Registro de <b>Cartorios</b></h2></div>
                     <div class="col-sm-4">
                         <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>Adicionar novo cartorio</button>
                     </div>
@@ -175,7 +175,8 @@ $(document).ready(function(){
                     <tr  th:each="cartorio: ${cartorios}">
                         <td th:text="${cartorio.nome}" >Monkey D. Luffy</td>
                         <td th:text="${cartorio.endereco}" >Rei dos piratas</td>
-                        <td th:text="${cartorio.certidoes.nome}">CARNE</td>
+                         <td th:text="${cartorio.certidoes.nome}">CARNE</td>
+                 
                         <td>
 							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -183,7 +184,8 @@ $(document).ready(function(){
                         </td>
                     </tr>     
                 </tbody>
-            </table>
+            </table> 
+         <!--   <button type="button" class="btn btn-success float-right"></i>Submeter alterações</button>-->
         </div>
     </div>     
 </body>
