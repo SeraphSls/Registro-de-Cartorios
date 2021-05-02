@@ -23,3 +23,10 @@ docker-compose up
 
 Após isso , a imagem com o MYSql estara disponivel na porta 3306, com acesso já configurado na aplicação.
 
+## Acessando a aplicação
+
+Após estes passos realizados vá até a classe **RdcApplication** run as > java Application , a aplicação pode ser acessada através da url:
+
+**localhost:8080/home**
+
+
