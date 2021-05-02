@@ -4,7 +4,7 @@ Desafio relacionado a um CRUD sobre registro de cartorios.
 
 ## Arquitetura utilizada na contrução
 
-Foi utilizado Spring MVC, Thymeleaf e Spring DATA JPA.
+Foi utilizado Spring boot, Spring MVC, Thymeleaf e Spring DATA JPA.
 
 
 ## Importação do projeto
