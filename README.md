@@ -18,7 +18,7 @@ Na estrutura da aplicação foi disponibilizada um arquivo "docker-compose.xml" 
 Tendo o docker instalado , vá até o diretorio do arquivo e execute o seguinte comando :
 
 ```
-docker-compose up -d --build
+docker-compose up 
 ```
 
 Após isso , a imagem com o MYSql estara disponivel na porta 3306, com acesso já configurado na aplicação.
