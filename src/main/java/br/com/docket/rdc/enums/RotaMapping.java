@@ -1,4 +1,4 @@
-package br.com.docket.rdc.to;
+package br.com.docket.rdc.enums;
 
 public enum RotaMapping {
 	

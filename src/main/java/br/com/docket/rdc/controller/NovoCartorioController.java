@@ -7,9 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.docket.rdc.enums.RotaMapping;
 import br.com.docket.rdc.model.Cartorio;
 import br.com.docket.rdc.to.CartorioTO;
-import br.com.docket.rdc.to.RotaMapping;
 
 @Controller
 @RequestMapping("novo")
